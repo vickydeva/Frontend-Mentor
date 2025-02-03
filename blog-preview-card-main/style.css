@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+* {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Gray500: hsl(0, 0%, 42%);
+  --Gray950: hsl(0, 0%, 7%);
+  --para: 14px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background: var(--Yellow);
+}
+.main {
+  width: 300px;
+  padding: 1rem;
+  border-radius: 12px;
+  border-top: 2px solid var(--Gray500);
+  border-left: 2px solid var(--Gray500);
+  box-shadow: 8px 8px var(--Gray950);
+  background: var(--White);
+}
+.main img {
+  width: 100%;
+  border-radius: 12px;
+}
+.main button {
+  font-family: inherit;
+  font-weight: 800;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Yellow);
+  color: var(--Gray950);
+  font-size: var(--para);
+  padding: 8px 12px;
+  margin: 15px auto 10px;
+  cursor: pointer;
+}
+.main .publish {
+  font-size: var(--para);
+  color: var(--Gray950);
+  font-weight: 300;
+}
+
+.main .heading {
+  color: var(--Gray950);
+  font-weight: 800;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.main .heading:hover {
+  color: var(--Yellow);
+  cursor: pointer;
+}
+.main .description {
+  color: var(--Gray500);
+  font-size: var(--para);
+}
+
+.author-info {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  justify-content: start;
+  align-items: center;
+}
+.author-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.author-info .author-name {
+  font-weight: 800;
+  color: var(--Gray950);
+  font-size: var(--para);
+}
+.footer {
+  font-size: 11px;
+  text-align: center;
+}
+.footer a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
