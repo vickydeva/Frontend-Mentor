@@ -1,0 +1,143 @@
+/* ? ..presets.. */
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-grayish-purple: hsl(292, 16%, 49%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
+
+  --para: 0.85rem;
+  --fs1: 2.5rem;
+  --fs2: 2rem;
+  --fs3: 1.75rem;
+  --fs4: 1.5rem;
+  --fs5: 1.25rem;
+  --fw-normal: 400;
+  --fw-bold: 600;
+  --fw-bolder: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-block-size: 100vh;
+  background: url(./assets/images/background-pattern-desktop.svg) no-repeat;
+  background-position: top;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+img {
+  display: block;
+  cursor: pointer;
+}
+h1 {
+  font-size: var(--fs1);
+  color: var(--clr-dark-purple);
+  font-weight: var(--fw-bolder);
+}
+h2 {
+  color: var(--clr-dark-purple);
+  font-size: var(--fs4);
+}
+h3 {
+  font-size: var(--para);
+}
+p {
+  font-size: 0.75rem;
+  color: var(--clr-grayish-purple);
+}
+
+/* * containers styles */
+main {
+  inline-size: 450px;
+  box-shadow: 2px 2px 10px var(--clr-grayish-purple);
+  border-radius: 12px;
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+  background-color: var(--clr-white);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+  padding-block-end: 1rem;
+  
+}
+.accordian-title:hover,
+.accordian-title:active{
+  color: purple;
+  cursor: pointer;
+}
+.accordian {
+  padding-block-end: 1rem;
+  margin-block-end: 1rem;
+}
+.header img {
+  inline-size: 40px;
+  block-size: 40px;
+}
+.accordian-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-end: 0.75rem;
+}
+.accordian-title img {
+  inline-size: 20px;
+  block-size: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.accordian.active p,
+.accordian.active .hide {
+  display: block;
+}
+.accordian.active .hide2 {
+  display: none;
+}
+
+.footer {
+  font-size: 11px;
+  text-align: center;
+}
+.footer a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ? mobile device design */
+@media (max-width: 375px) {
+  body {
+    background: url(./assets/images/background-pattern-mobile.svg) no-repeat top/contain;
+    padding-inline: 2rem;
+  }
+  main {
+    inline-size: auto;
+  }
+  .header img {
+    inline-size: 45px;
+    block-size: 45px;
+}
+.accordian-title img{
+  inline-size: 25px;
+  block-size: 25px;
+}
+}
